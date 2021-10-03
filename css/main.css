@@ -1,0 +1,216 @@
+/* Start Vars */
+:root {
+    --main-color: #ff9811;
+    --second-color: #2488ff;
+    --text-color: #231f20;
+}
+/* End Vars */
+/* Start Global Values */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    font-size: 14px;
+}
+/* End Global Values */
+/* Start Header */
+header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    min-height: 96.1px;
+}
+header a {
+    padding: 41px 10px;
+    position: relative;
+}
+.toggle-menu:hover {
+    color: var(--second-color);
+}
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav i{
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    right: 30px;
+    top: 45px;
+    z-index: 20;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    header nav i {
+        display: none !important;
+    }
+    header nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative 
+    }
+}
+@media (max-width: 767px) {
+    ul {
+        display: none;
+    }
+    nav ul:before {
+        display: none;
+    }
+    nav ul:before {
+        display: none;
+    }
+    ul li:hover::before {
+        display: none;
+    }
+}
+nav ul:before {
+    content: "";
+    background: var(--text-color);
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    position: absolute
+}
+ul a:hover{
+    color: var(--second-color);
+}
+ul li:hover::before {
+    content: '';
+    width: calc(100% / 7.4);
+    background: var(--second-color);
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    background-image: url("../images/books-1245690_1920.jpg");
+    background-size: cover;
+    height: calc(100vh - 98.6px);
+    position: relative;
+}
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b0bec5;
+    opacity: 60%;
+}
+table {
+    color: white;
+    position: absolute;
+    table-layout: fixed;
+    width: calc(100% - 20px);
+    text-align: center;
+    margin: 10px;
+}
+table * {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+table tbody tr td:nth-child(3) a {
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    
+}
+table tbody tr td:nth-child(3) a:hover {    
+    color: var(--second-color);
+}
+table th, td {
+    padding: 15px;
+}
+table tr {
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+    table thead {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    }
+    
+    table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+    }
+    
+    table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+    }
+    
+    table td::before {
+    content: attr(data-label);
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+
+    table tbody tr td:nth-child(3) a {
+        width: 54%;
+    }
+    table td:last-child {
+    border-bottom: 0;
+    }
+    table tbody tr:nth-child(4){
+        margin-bottom: 0; 
+    }
+    .landing {
+        min-height: 280vh;
+    }
+
+}
+.profiles {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 40;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+.profiles div a {
+    font-size: 17px;
+}
+.profiles div a:hover{
+    color: var(--second-color);
+}
+/* End Landing */
