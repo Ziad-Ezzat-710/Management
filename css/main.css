@@ -45,6 +45,7 @@ header {
 header a {
     padding: 41px 10px;
     position: relative;
+    font-weight: bold;
 }
 .toggle-menu:hover {
     color: var(--second-color);
@@ -132,6 +133,7 @@ table {
     width: calc(100% - 20px);
     text-align: center;
     margin: 10px;
+    font-weight: bold;
 }
 table * {
     background-color: var(--main-color);
@@ -209,6 +211,7 @@ table tr {
 }
 .profiles div a {
     font-size: 17px;
+    font-weight: bold;
 }
 .profiles div a:hover{
     color: var(--second-color);
